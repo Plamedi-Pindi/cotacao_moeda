@@ -23,13 +23,16 @@ function App() {
   const [input1, setInput1] = useState<string | undefined>("");
   const [input2, setInput2] = useState<string | undefined>("");
   const [amount, setAmount] = useState(0);
-  const [fromCurrency, setFromCurrency] = useState('USA');
-  const [toCurrency, setToCurrency] = useState('AOA');
+  const [fromCurrency, setFromCurrency] = useState("USA");
+  const [toCurrency, setToCurrency] = useState("AOA");
 
 
   const from = fromCurrency;
   const to = toCurrency;
   const debouncedAmount = useDebounce(amount, 300);
+
+  console.log(from, to);
+  
 
   // Busca lista de moedas (com cache automático)
   const { data: currencies = [], isLoading } = useQuery({

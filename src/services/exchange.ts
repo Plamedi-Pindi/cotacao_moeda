@@ -27,6 +27,5 @@ export const getEchangeRate = async (from: string, to: string, amount: number) =
 
   } catch (error) {
     console.error('Erro ao obter taxa de câmbio:', error);
-    return 0; 
   }
 }   
